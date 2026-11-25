@@ -7,7 +7,7 @@
 - **Fuente:** SUNAT (Superintendencia Nacional de Aduanas y de Administración Tributaria), Padrón Reducido de RUC, archivo de **locales anexos** (`padron_reducido_local_anexo.zip`).
 - **Datos reales:** son registros públicos de contribuyentes, no simulados.
 - **Archivo usado:** `datos/padron_reducido_local_anexo.txt` (50,496,158 bytes).
-- **Fecha de descarga:** ____________ (completar)
+- **Fecha de descarga:** 11 de noviembre de 2026
 - **Enlace de descarga:** página del Padrón Reducido de SUNAT, https://www.sunat.gob.pe/descargaPRR/mrc137_padron_reducido.html (enlace «padrón_reducido_Local_Anexo.zip»). Enlace directo: https://www.sunat.gob.pe/descargaPRR/padron_reducido_local_anexo.zip
 
 El **padrón completo** de contribuyentes (alrededor de 14 millones de filas) no se pudo descargar, así que se trabaja solo con el archivo de locales anexos. Es un conjunto real y lo bastante grande para el caso, pero no es el padrón entero. Conviene decirlo así en la presentación.
