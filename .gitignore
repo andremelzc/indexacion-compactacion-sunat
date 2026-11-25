@@ -1,0 +1,35 @@
+# Compilación
+out/
+*.class
+
+# Archivos generados al ejecutar (locales.dat, índices, metadatos, temporales)
+salida/
+servidor.log
+*.log
+
+# Datos de SUNAT (unos 50 MB): se descargan aparte, ver datos/README.md
+datos/*
+!datos/.gitkeep
+!datos/README.md
+
+# Temporales
+*.tmp
+*.temp
+*~
+*.bak
+*.swp
+*.swo
+
+# Editores e IDE
+.vscode/
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+nbproject/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
