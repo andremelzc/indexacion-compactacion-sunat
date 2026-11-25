@@ -7,10 +7,11 @@ salida/
 servidor.log
 *.log
 
-# Datos de SUNAT (unos 50 MB): se descargan aparte, ver datos/README.md
+# Datos: solo se versiona el TXT de SUNAT (ver datos/README.md)
 datos/*
 !datos/.gitkeep
 !datos/README.md
+!datos/padron_reducido_local_anexo.txt
 
 # Temporales
 *.tmp

@@ -1,8 +1,8 @@
 # Carpeta de datos
 
-El archivo de datos no se sube al repositorio porque pesa unos 50 MB.
+El archivo de datos ya viene incluido en el repositorio: al clonar queda en `datos/padron_reducido_local_anexo.txt` y no hace falta descargarlo.
 
-## Qué archivo poner aquí
+## El archivo
 
 - **Nombre:** `padron_reducido_local_anexo.txt`
 - **Tamaño esperado:** 50,496,158 bytes (779,251 registros más el encabezado)
@@ -10,7 +10,7 @@ El archivo de datos no se sube al repositorio porque pesa unos 50 MB.
 - **Página de descarga:** https://www.sunat.gob.pe/descargaPRR/mrc137_padron_reducido.html
 - **Enlace directo:** https://www.sunat.gob.pe/descargaPRR/padron_reducido_local_anexo.zip
 
-## Cómo dejarlo listo
+## Si hay que volver a descargarlo
 
 1. Descarga `padron_reducido_local_anexo.zip` desde la página del Padrón Reducido de SUNAT (enlace «padrón_reducido_Local_Anexo.zip»).
 2. Descomprímelo y copia `padron_reducido_local_anexo.txt` en esta carpeta (`datos/`).

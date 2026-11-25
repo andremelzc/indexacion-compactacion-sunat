@@ -51,7 +51,7 @@ Más detalle en [docs/06-guia-de-uso.md](docs/06-guia-de-uso.md).
 ```
 src/      código Java (Main, Servidor, Trabajo, Registro, ArchivoDatos, Indice, Compactador)
 web/      la página web (un solo archivo, sin librerías)
-datos/    el archivo de texto de SUNAT (padron_reducido_local_anexo.txt)
+datos/    el archivo de texto de SUNAT (padron_reducido_local_anexo.txt), incluido en el repo
 docs/     la documentación
 salida/   se crea sola al cargar los datos: locales.dat, índices y metadatos
 out/      se crea al compilar
