@@ -337,7 +337,59 @@ public class Servidor implements HttpHandler {
         return new String(b, "UTF-8");
     }
 
+    // Acomoda un JSON en varias lineas con sangria para que se lea bien en la terminal.
+    static String ordenar(String json) {
+        StringBuilder r = new StringBuilder();
+        int nivel = 0;
+        boolean enTexto = false;
+        for (int i = 0; i < json.length(); i++) {
+            char c = json.charAt(i);
+            if (enTexto) {
+                r.append(c);
+                if (c == '\\' && i + 1 < json.length()) {
+                    i++;
+                    r.append(json.charAt(i));
+                } else if (c == '"') {
+                    enTexto = false;
+                }
+            } else if (c == '"') {
+                enTexto = true;
+                r.append(c);
+            } else if (c == '{' || c == '[') {
+                char cierre = (c == '{') ? '}' : ']';
+                if (i + 1 < json.length() && json.charAt(i + 1) == cierre) {
+                    r.append(c).append(cierre);
+                    i++;
+                } else {
+                    nivel++;
+                    r.append(c).append('\n').append(sangria(nivel));
+                }
+            } else if (c == '}' || c == ']') {
+                nivel--;
+                r.append('\n').append(sangria(nivel)).append(c);
+            } else if (c == ',') {
+                r.append(",\n").append(sangria(nivel));
+            } else if (c == ':') {
+                r.append(": ");
+            } else {
+                r.append(c);
+            }
+        }
+        return r.append('\n').toString();
+    }
+
+    static String sangria(int nivel) {
+        String s = "";
+        for (int i = 0; i < nivel; i++) {
+            s = s + "  ";
+        }
+        return s;
+    }
+
     static void responder(HttpExchange ex, int codigo, String tipo, String texto) throws IOException {
+        if (tipo.equals("application/json")) {
+            texto = ordenar(texto);
+        }
         byte[] b = texto.getBytes("UTF-8");
         Headers h = ex.getResponseHeaders();
         h.set("Content-Type", tipo + "; charset=utf-8");
